@@ -1,5 +1,5 @@
 class SchoolClassesController < ApplicationController
-    
+
 def index
     @school_classes = SchoolClass.all
 end 
@@ -14,7 +14,7 @@ def new
 end 
 
 def create
-    school_class = SchoolClass.create(post_params(:title, :number_room))
+    school_class = SchoolClass.create(post_params(:title, :room_number))
 
     redirect_to school_class_path(school_class)
 end 
@@ -24,7 +24,7 @@ def edit
 end 
 
 def update 
-    school_class = SchoolClass.update(post_params(:title, :number_room))
+    school_class = SchoolClass.update(post_params(:title, :room_number))
 
     redirect_to school_class_path(school_class)
 end 
