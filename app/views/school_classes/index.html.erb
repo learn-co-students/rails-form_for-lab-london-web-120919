@@ -1,0 +1,6 @@
+<h1><% @school_classes.each do |schoolclass|%></h1>
+<p>
+<%=link_to schoolclass.title, edit_school_class_path(schoolclass)%><br>
+<%= schoolclass.room_number %>
+</p>
+<% end %>
